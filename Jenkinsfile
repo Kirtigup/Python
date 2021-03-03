@@ -1,7 +1,7 @@
 pipeline{
   environment{
     registry = "samrika26/python_app"
-    registeryCredential = 'dockerhub_id'
+   credentialsId = 'dockerhub_id'
     dockerImage = ''
   }
   agent any
@@ -19,7 +19,7 @@ pipeline{
               stage('Docker-push'){
                 steps{
                   script{
-                    docker.withRegistery( '', registryCredential ){
+                    docker.withRegistery( '', credentialsId ){
                                   dockerImage.push()
                       
                                    }
