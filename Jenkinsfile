@@ -1,6 +1,6 @@
 pipeline{
   environment{
-    registry = "samrika26/python_app"
+    registry = "samrika26/python_app1"
    registryCredential = 'dockerhub_id'
     dockerImage = ''
   }
