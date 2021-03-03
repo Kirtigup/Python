@@ -1,7 +1,7 @@
 pipeline{
   environment{
     registry = "samrika26/python_app"
-   credentialsId = 'dockerhub_id'
+   registryCredential = 'dockerhub_id'
     dockerImage = ''
   }
   agent any
@@ -11,7 +11,7 @@ pipeline{
               stage('Docker-build'){
                 steps {
                   script {
-                          dockerImage = docker.build registry
+                          dockerImage = docker.build registry + ":$BUILD_NUMBER"
                          }
                      }
               }
@@ -19,7 +19,7 @@ pipeline{
               stage('Docker-push'){
                 steps{
                   script{
-                    docker.withRegistery( '', credentialsId ){
+                    docker.withRegistry( '', registryCredential ){
                                   dockerImage.push()
                       
                                    }
