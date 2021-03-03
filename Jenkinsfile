@@ -1,9 +1,10 @@
 pipeline{
-  enviroment{
+  environment{
     registry = "samrika26/python_app"
     registeryCredential = 'dockerhub_id'
     dockerImage = ''
   }
+  agent any
   stages{
 
               
