@@ -42,11 +42,12 @@ pipeline{
              stage('Deploy to IKS'){
                 steps {
                   sh '''
-                          ibmcloud ks cluster congig --cluster ${IKS_CLUSTER}
+                          ibmcloud ks cluster config --cluster ${IKS_CLUSTER}
                           kubectl config current-context
                           export BUILD_NUMBER=$BUILD_NUMBER
                           kubectl apply -f deployment.yml
                           kubectl apply -f service.yml
+                          kubectl apply -f ingress.yml
                           '''
                         
                      }
