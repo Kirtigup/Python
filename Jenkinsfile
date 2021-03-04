@@ -3,7 +3,7 @@ pipeline{
     IBM_CLOUD_REGION = 'eu-de'
     REGISTRY_HOSTNAME= 'de.icr.io'
     IKS_CLUSTER= 'c0sf25ud0fesivtjm07g'
-    registry = "samrika26/python_app10"
+    registry = "samrika26/python_app11"
     registryCredential = 'dockerhub_id'
     dockerImage = ''
   }
