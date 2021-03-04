@@ -12,7 +12,7 @@ spec:
       spec:
         containers:
         - name: python-app-container
-          image: samrika26/python_app:latest
+          image: samrika26/python_app10:latest
           ports:
           - containerPort: 80
 
