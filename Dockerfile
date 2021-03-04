@@ -1,5 +1,5 @@
 FROM python:latest
-COPY * /
+COPY . /
 RUN pip install Flask
 RUN pip install flask_restful
 RUN python3 -m venv venv
