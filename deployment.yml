@@ -17,7 +17,7 @@ spec:
     spec:
         containers:
         - name: python-app-container
-          image: samrika26/python_app11:latest
+          image: samrika26/python_app12:latest
           imagePullPolicy: Always
           ports:
           - containerPort: 80
