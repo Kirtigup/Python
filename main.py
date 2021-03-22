@@ -1,4 +1,4 @@
-#flask package install (in that Flask class define)(render_template=used to generate output from template file based on jinja2 engine that is found in application's template folder )
+#flask package install (in that Flask class define)((Flask function from flask package)render_template=used to generate output from template file based on jinja2 engine that is found in application's template folder )
 from flask import Flask, render_template
 #app defined here 
 app = Flask(__name__)
