@@ -9,3 +9,4 @@ def hello_world():
 #here app.run is used to run ur web based application
 if __name__ == "__main__":
     app.run(host ='0.0.0.0', port=5001 ,debug =True)
+#debug=true means automatically detect the change in output and show 
