@@ -1,0 +1,9 @@
+---
+-  name: "check target through ansible playbook"
+   hosts: target1
+   tasks:
+     -  name: create folder on target machine
+        file:
+          src: /home/ubuntu/folder424
+          state: directory
+...
