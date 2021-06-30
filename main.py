@@ -3,7 +3,6 @@ import os
 from flask import Flask, render_template
 #app defined here 
 app = Flask(__name__)
-color=os.environ.get('APP_COLOR')
 #whenever end user goes in /point he or she will see output
 @app.route('/')
 def hello_world():
