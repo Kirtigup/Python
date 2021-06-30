@@ -4,8 +4,9 @@ sudo: required
 language: python
 python:
   - "3.8"
-  # PyPy versions
-  - "pypy3"  # currently Python 3.6.1,  PyPy 7.1.1-beta0
+install:
+  - pip install Flask
+  - pip install flask_restful
 # command to install dependencies
 
 # command to run tests
