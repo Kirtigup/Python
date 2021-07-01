@@ -3,7 +3,7 @@ sudo: required
 services:
   - docker
 before_install:
-  - docker build -t samrika26/Py_travis .
+  - docker build -t samrika26/py_travis .
 #travis ci understand we need python preinstalled
 language: python
 python:
@@ -17,8 +17,8 @@ install:
 # command to run tests
 script: 
    - python main.py
-   - docker run samrika26/Py_travis python main.py
+
 
 after_success:
   - echo "$DOCKER_PASSWORD" |docker login -u "$DOCKER_ID" --password--stdin
-  - docker push samrika26/Py_travis
+  - docker push samrika26/py_travis
