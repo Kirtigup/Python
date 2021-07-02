@@ -6,7 +6,6 @@ app = Flask(__name__)
 #whenever end user goes in /point he or she will see output
 @app.route('/')
 def hello_world():
-    print(color)
     return render_template('index.html');
 #here app.run is used to run ur web based application
 if __name__ == "__main__":
