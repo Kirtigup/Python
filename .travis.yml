@@ -16,7 +16,7 @@ install:
 
 # command to run tests
 script: 
-   - python -m pytest -v
+   - python main.py
 
 
 after_success:
