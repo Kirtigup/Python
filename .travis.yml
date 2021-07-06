@@ -1,5 +1,6 @@
 #supper user permission given by travis
 sudo: required
+language: generic
 services:
   - docker
 before_install:
@@ -12,11 +13,12 @@ install:
   - pip install Flask
   - pip install flask_restful
   - pip install gunicorn 
+  - pip install .
 # command to install dependencies
 
 # command to run tests
 script: 
-   - python main.py
+   - python -m pytest -v
 
 
 after_success:
