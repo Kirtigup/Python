@@ -12,7 +12,6 @@ python:
 install:
   - pip install Flask
   - pip install flask_restful
-  - pip install .
 # command to install dependencies
 
 # command to run tests
