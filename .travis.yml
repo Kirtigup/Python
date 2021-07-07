@@ -1,0 +1,33 @@
+#supper user permission given by travis
+sudo: required
+language: python
+python:
+  - "3.8"
+services:
+  - docker
+before_install:
+  - docker build -t samrika26/py_travis .
+#travis ci understand we need python preinstalled
+
+install:
+  - pip3 install Flask
+  - pip3 install flask_restful
+# command to install dependencies
+
+# command to run tests
+script:
+ - echo 6
+
+
+after_success:
+  - echo "$DOCKER_PASSWORD" |docker login -u "$DOCKER_ID" --password--stdin
+  - docker push samrika26/py_travis
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+   branch: master
+
