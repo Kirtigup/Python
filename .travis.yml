@@ -15,7 +15,9 @@ install:
 
 # command to run tests
 script:
- - echo 6
+ - echo 5
+
+# command to install dependenci
 
 
 after_success:
