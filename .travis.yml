@@ -6,12 +6,11 @@ python:
 services:
   - docker
 before_install:
-  - docker build -t samrika26/py_travis .
+  - docker build -t samrika26/py2_travis .
 #travis ci understand we need python preinstalled
 
 install:
-  - pip3 install Flask
-  - pip3 install flask_restful
+  - pip3 install -r requirements.txt
 # command to install dependencies
 
 # command to run tests
@@ -21,7 +20,7 @@ script:
 
 after_success:
   - echo "$DOCKER_PASSWORD" |docker login -u "$DOCKER_ID" --password--stdin
-  - docker push samrika26/py_travis
+  - docker push samrika26/py2_travis
 
 deploy:
   provider: pages
