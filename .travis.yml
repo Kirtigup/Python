@@ -10,7 +10,7 @@ before_install:
 #travis ci understand we need python preinstalled
 
 install:
-  - pip3 install -r requiremets.txt
+  - pip3 install -r requirements.txt
 # command to install dependencies
 
 # command to run tests
