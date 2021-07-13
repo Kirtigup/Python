@@ -8,6 +8,7 @@ app = Flask(__name__)
 def hello_world():
     return render_template('index.html');
 #here app.run is used to run ur web based application
+port = int(os.environ.grt('PORT',5001))
 if __name__ == "__main__":
-    app.run(host ='0.0.0.0', port=5001 ,debug =True)
+    app.run(host ='0.0.0.0', port=port,debug =True)
 #debug=true means automatically detect the change in output and show 
