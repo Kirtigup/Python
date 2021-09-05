@@ -8,7 +8,7 @@ services:
 before_script:
         - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
         - curl https://cli-assets.heroku.com/install.sh | sh  #install heroku
-        - docker login --username=$HEROKU_LOGIN --password=$HEROKU_API_KEY registry.heroku.com 
+        - docker login --username=$HEROKU_PASSWORD --password=$HEROKU_API_KEY registry.heroku.com 
 
 script:
         - docker build -t kirtigupta123/flask_app1:v1 .
@@ -18,7 +18,7 @@ deploy:
         script: 
                docker push kirtigupta123/flask_app1:v1;
                docker push registry.heroku.com/$HEROKU_APP/web;
-               heroku container:release web --app $python-app-helloworld
+               heroku container:release web --app $HEROKU_APP
         on:
           branch: master
 
